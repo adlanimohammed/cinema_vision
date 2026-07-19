@@ -29,7 +29,22 @@ A desktop cinema management application built with Python and Tkinter, backed by
 git clone https://github.com/adlanimohammed/cinema_vision.git
 cd cinema_vision
 python3 -m venv .venv
+```
+
+Activate the virtual environment:
+
+**Linux / macOS:**
+```bash
 source .venv/bin/activate
+```
+
+**Windows:**
+```cmd
+.venv\Scripts\activate
+```
+
+Then install dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
