@@ -41,7 +41,8 @@ class CinemaApp :
     self.init_handlers()
 
     # --- setup data (deferred so window renders first) ---
-    self.root.after(100, state.db_manager.setup_data)
+    if state.db_manager is not None :
+      self.root.after(100, state.db_manager.setup_data)
 
   def setup_styles(self) :
     self.style = ttk.Style(self.root)
