@@ -26,8 +26,10 @@ A desktop cinema management application built with Python and Tkinter, backed by
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/cinema_vision.git
+git clone https://github.com/adlanimohammed/cinema_vision.git
 cd cinema_vision
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
