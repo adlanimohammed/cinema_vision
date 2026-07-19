@@ -1,6 +1,3 @@
-from dotenv import load_dotenv
-load_dotenv()
-
 import os
 import threading
 from tkinter import messagebox
@@ -12,10 +9,8 @@ from src.gui import state
 class DatabaseManager :
   def __init__(self, root) :
     self.__root = root
-    url = os.environ.get("SUPABASE_URL")
-    key = os.environ.get("SUPABASE_KEY")
-    if not url or not key :
-      raise EnvironmentError("Missing .env file.\n\nCreate a .env file in the project root with:\n  SUPABASE_URL=\"your-project-url\"\n  SUPABASE_KEY=\"your-anon-key\"\n\nSee README.md for details.")
+    url = os.environ.get("SUPABASE_URL") or "https://uxkhckyypfsdoclxxyfa.supabase.co"
+    key = os.environ.get("SUPABASE_KEY") or "sb_publishable_YqzXyD44U_ZkDNeycTw5HA_0wCegTk8"
     self.__supabase = create_client(url, key)
 
   @property

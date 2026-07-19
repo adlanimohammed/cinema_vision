@@ -50,15 +50,6 @@ pip install -r requirements.txt
 
 > **Debian/Ubuntu users:** If you get `externally-managed-environment` error, run `sudo apt install python3-venv` first.
 
-### Environment Setup
-
-Create a `.env` file in the project root with your Supabase credentials:
-
-```
-SUPABASE_URL="your-project-url"
-SUPABASE_KEY="your-anon-key"
-```
-
 ### Supabase Setup
 
 Create the following tables in your Supabase project:
@@ -152,7 +143,7 @@ The application follows an **MVC-inspired** pattern:
 - **Language:**     Python 3.10+
 - **GUI:**          Tkinter / ttk
 - **Database:**     Supabase (PostgreSQL)
-- **Dependencies:** python-dotenv, supabase, tkcalendar
+- **Dependencies:** supabase, tkcalendar
 
 ## License
 
