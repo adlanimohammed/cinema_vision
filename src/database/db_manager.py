@@ -15,7 +15,7 @@ class DatabaseManager :
     url = os.environ.get("SUPABASE_URL")
     key = os.environ.get("SUPABASE_KEY")
     if not url or not key :
-      raise EnvironmentError("SUPABASE_URL and SUPABASE_KEY must be set in .env file.")
+      raise EnvironmentError("Missing .env file.\n\nCreate a .env file in the project root with:\n  SUPABASE_URL=\"your-project-url\"\n  SUPABASE_KEY=\"your-anon-key\"\n\nSee README.md for details.")
     self.__supabase = create_client(url, key)
 
   @property

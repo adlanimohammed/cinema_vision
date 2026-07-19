@@ -546,7 +546,12 @@ class CinemaApp :
     # ----
     self.reservation_handler = ReservationHandler(client_id_entry=self.reserve_client, seance_id_entry=self.reserve_seance, ticket_id_entry=self.cancel_ticket)
     # ----
-    state.db_manager = DatabaseManager(root=self.root)
+    try :
+      state.db_manager = DatabaseManager(root=self.root)
+    except EnvironmentError as e :
+      from tkinter import messagebox
+      messagebox.showerror(title="setup required", message=str(e))
+      self.root.destroy()
 
   def on_tab_changed(self, event) :
     current_tab = self.notebook.index(self.notebook.select())
